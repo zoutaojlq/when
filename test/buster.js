@@ -6,7 +6,7 @@ config.node = {
 	environment: 'node',
 	rootPath: '../',
 	tests: [
-		'test/**/*-test.js'
+		'test/travis-sauce-test.js'
 	]
 };
 
@@ -15,12 +15,12 @@ config.browser = {
 	autoRun: false,
 	rootPath: '../',
 	resources: [
-		//'**', ** is busted in buster
-		'*.js',
-		'lib/**/*.js',
-		'monitor/**/*.js',
-		'node/**/*.js',
-		'unfold/**/*.js',
+//		//'**', ** is busted in buster
+//		'*.js',
+//		'lib/**/*.js',
+//		'monitor/**/*.js',
+//		'node/**/*.js',
+//		'unfold/**/*.js',
 		'node_modules/curl/**/*.js',
 		'node_modules/poly/**/*.js'
 	],
@@ -32,7 +32,7 @@ config.browser = {
 		// loaded as resources
 	],
 	tests: [
-		'test/**/*-test.js',
+		'test/travis-sauce-test.js',
 		'test/run.js'
 	]
 };

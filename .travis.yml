@@ -7,7 +7,7 @@ branches:
   only:
     - dev
     - master
-    - fix-timers2
+    - sauce-travis-issue
 env:
   global:
     - SAUCE_USERNAME="cujojs-when"
