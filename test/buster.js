@@ -1,44 +1,16 @@
-(function() {
-
-var config = {};
-
-config.node = {
+exports.node = {
 	environment: 'node',
 	rootPath: '../',
 	tests: [
-		'test/**/*-test.js'
+		'test/inspect-test.js'
 	]
 };
 
-config.browser = {
+exports.browser = {
 	environment: 'browser',
-	autoRun: false,
 	rootPath: '../',
-	resources: [
-		//'**', ** is busted in buster
-		'*.js',
-		'lib/**/*.js',
-		'monitor/**/*.js',
-		'node/**/*.js',
-		'unfold/**/*.js',
-		'node_modules/curl/**/*.js',
-		'node_modules/poly/**/*.js'
-	],
-	libs: [
-		'test/curl-config.js',
-		'node_modules/curl/src/curl.js'
-	],
-	sources: [
-		// loaded as resources
-	],
 	tests: [
-		'test/**/*-test.js',
-		'test/run.js'
-	]
+		'test/browser/tests.js'
+	],
+	testbed: 'test/browser/index.html'
 };
-
-if(typeof module != 'undefined') {
-	module.exports = config;
-}
-
-})();
